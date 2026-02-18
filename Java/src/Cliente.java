@@ -8,7 +8,12 @@ public class Cliente {
         this.email = email;
         this.direccion = direccion;
     }
-    public String obtenerDetallesclientes() {
-        return String.format("Nombre: %s \nEmail: %s  \nDireccion: %s ", nombre, email, direccion);
+
+    @Override
+    public String toString() {
+        return "Cliente:" +
+                "\nnombre: " + nombre +
+                "\nemail: " + email +
+                "\ndireccion: " + direccion;
     }
 }

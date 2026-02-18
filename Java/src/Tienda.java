@@ -1,11 +1,25 @@
+import java.util.ArrayList;
+
 public class Tienda {
-    private Pedido[] pedido;
-    private Cliente[] cliente;
+    private ArrayList<Pedido> pedidos;
+    private ArrayList<Cliente> clientes;
 
     public Tienda() {
-        this.pedido = new Pedido[5];
-        this.cliente = new Cliente[5];
+        pedidos= new ArrayList<>();
+        clientes= new ArrayList<>();
     }
 
-    public void añadircliente(Cliente cliente){cliente.obtenerDetallesclientes();}
+    public void añadirCliente(Cliente cliente){
+        clientes.add(cliente);
+    }
+    public void añadirPedido(Pedido pedido){
+        pedidos.add(pedido);
+    }
+
+    @Override
+    public String toString() {
+        return "------ TIENDA ------\n" +
+                "------ CLIENTE ------\n" + clientes +
+                "\n------ PEDIDO -------\n" + pedidos ;
+    }
 }
